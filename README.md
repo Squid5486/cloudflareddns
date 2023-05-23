@@ -6,7 +6,7 @@ This is a simple python script combined with docker that is able to update the i
 
 Edit the docker-compose.yml file to include a generated Cloudflare API Token, your domain and the record you wish to change. In my case the record name was the same as the domain name. I included a guide below on how to obtain a API Token. 
 
-version: "3.8"
+<pre>version: "3.8"
 services:
   cloudflareddns:
     image: cloudflareddns
@@ -17,11 +17,11 @@ services:
       - TOKEN=token
       - DOMAIN=domain
       - RECORD=record
-      - UPDATEINTERVAL=5
+      - UPDATEINTERVAL=5</pre>
 
 It is even possible to run multiple instances of the script if you wish to update multiple domains.
 
-version: "3.8"
+<pre>version: "3.8"
 services:
   domain1:
     image: cloudflareddns
@@ -42,7 +42,7 @@ services:
       - TOKEN=token2
       - DOMAIN=domain2
       - RECORD=record2
-      - UPDATEINTERVAL=5
+      - UPDATEINTERVAL=5</pre>
 
 ## Getting a the Cloudflare API Token
 
