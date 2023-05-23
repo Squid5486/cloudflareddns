@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  cloudflareddns:
+    image: cloudflareddns
+    build: . 
+    container_name: cloudflareddns
+    restart: unless-stopped
+    environment:
+      - TOKEN=token
+      - DOMAIN=domain
+      - RECORD=record
+      - UPDATEINTERVAL=5
